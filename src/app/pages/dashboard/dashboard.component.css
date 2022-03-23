@@ -11,3 +11,14 @@ td,
 th {
     width: 25%;
 }
+
+.box {
+    width: 200px;
+    height: 150px;
+    border: 1px dotted grey;
+}
+
+
+/* .mainbox {
+    overflow-x: auto;
+} */
