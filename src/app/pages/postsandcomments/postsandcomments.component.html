@@ -1,0 +1,13 @@
+<div class="container d-flex">
+    <div class="col-md-4 posts-box">
+        <h2>Posts</h2>
+        <div *ngFor="let post of allPosts" (click)="getAllComments(post.id)">
+            <h4>{{post.title}}</h4>
+        </div>
+
+    </div>
+    <div class="col-md-8 comments-box">
+        <h2>Comments</h2>
+        <router-outlet></router-outlet>
+    </div>
+</div>

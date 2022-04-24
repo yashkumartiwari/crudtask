@@ -9,14 +9,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.module';
 import { ConfirmationDialogComponent } from './pages/confirmation-dialog/confirmation-dialog.component';
 import { HttpClientModule } from '@angular/common/http';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations"
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { LowercasePipe } from './core/pipes/lowercase.pipe';
+import { PostsandcommentsComponent } from './pages/postsandcomments/postsandcomments.component';
+import { CommentsComponent } from './pages/comments/comments.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    AddEditUserComponent,ConfirmationDialogComponent
+    AddEditUserComponent,ConfirmationDialogComponent, LowercasePipe, PostsandcommentsComponent, CommentsComponent
    
     
   ],

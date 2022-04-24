@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from '../model/user.model';
 
@@ -7,7 +7,7 @@ import { User } from '../model/user.model';
 })
 export class HttpServiceService {
 
-  constructor(private http:HttpClientModule) { }
+  constructor(private http:HttpClient) { }
 
 
   getAllUsers(){
@@ -27,5 +27,15 @@ export class HttpServiceService {
   editUser(data:User[]){
     localStorage.setItem('userList', JSON.stringify(data))
     return true
+  }
+
+
+  //To get all posts from
+  getAllPosts(){
+    return this.http.get<any>(`https://jsonplaceholder.typicode.com/posts`)
+  }
+  //To get all Comments of a post
+  getAllcommets(id){
+    return this.http.get<any>(`https://jsonplaceholder.typicode.com/posts/${id}/comments`)
   }
 }
